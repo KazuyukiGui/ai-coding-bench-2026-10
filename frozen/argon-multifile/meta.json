@@ -1,0 +1,1 @@
+{"title": "共有リソースの複数ユニット予約と部分解放対応", "category": "multifile", "answer": ["models.py", "allocator.py", "service.py"]}

@@ -1,0 +1,10 @@
+{
+ "model": "claude",
+ "started": "2026-10-14T15:37:41",
+ "ok": true,
+ "input_tokens": 8346,
+ "output_tokens": 4567,
+ "thinking_tokens": 1426,
+ "cost_usd_equiv": 0.0930168,
+ "seconds": 36.4
+}

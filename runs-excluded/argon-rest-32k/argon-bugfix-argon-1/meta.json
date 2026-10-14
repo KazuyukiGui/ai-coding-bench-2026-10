@@ -1,0 +1,12 @@
+{
+ "model": "argon",
+ "started": "2026-10-14T18:38:38",
+ "ok": true,
+ "truncated": false,
+ "effort": "high",
+ "input_tokens": 6094,
+ "output_tokens": 3,
+ "thinking_tokens": 32765,
+ "cost_usd": 0.3399,
+ "seconds": 379.2
+}

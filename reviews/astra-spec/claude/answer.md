@@ -1,0 +1,3 @@
+```json
+{"issues": [{"severity": "low", "where": "課題文「スナップショット」節の例", "problem": "例は now=3、on_hand=6、hold H1 の quantity=3・until=15 です。操作節の例を receive→reserve→resize→ship の順に適用すると、H1 は until=18、quantity=1、reserved=1 になり、例と合いません。例と合うのは resize を飛ばした場合だけです。そのため、各操作の例の連続適用結果だと読むと矛盾して見え、仕様の理解を迷わせます。試験の結果には影響しません。", "fix": "スナップショット例の直前に、どの操作列の結果かを明記してください（例：「receive(L1)、reserve(H1, 5, until=15)、ship(H1, 2, at=3) の後」）。または、操作例を順に適用した結果（until=18、quantity=1、reserved=1、available=5）に例を合わせてください。"}]}
+```

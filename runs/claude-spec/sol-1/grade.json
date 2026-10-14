@@ -1,0 +1,1 @@
+{"run": 38, "fail": 0, "error": 1, "skip": 0, "bad": 1, "names": ["test_hidden.TestSyntax.test_names_case_insensitive"], "passed": 37, "status": "fail", "missing": [], "lines": 399}

@@ -1,0 +1,9 @@
+```json
+{"issues": [
+  {"severity": "high", "where": "tests: test_03_line_continuation_and_even_backslashes（joined の部分）", "problem": "課題文 §2 では、継続先の行がコメントだけの行なら、空文字列を結合してその行で継続が終わる。この規則どおりだと、論理行は『joined = [1, 2, 』と『3]』の2行に分かれる。前者は配列が閉じていないので ConfigError、後者は '=' が無いので ConfigError になる。模範解答もこの規則どおりに実装されており、試験は ConfigError で落ちる。期待値 [1, 2, 3] が課題文と矛盾している。", "fix": "joined の例からコメント行『  # comment on continued line』を外し、'joined = [1, \\\\\\n  2, \\\\\\n  3]\\n' とする。または、この入力は ConfigError になると確かめる別の試験に分ける。"},
+  {"severity": "high", "where": "tests: test_08_numeric_literals_and_underscores（bad_nums の \"a = 0x_10\"）", "problem": "Python では 0x_10 は正しい数値リテラルで、int('0x_10', 0) は 16 を返す。課題文も『Pythonの数値リテラルと同様』と書いている。模範解答は INT_RE に一致させたあと int(val, 0) を呼ぶので 16 を返し、ConfigError を期待する試験は模範解答自体で落ちる。", "fix": "bad_nums から \"a = 0x_10\" を外す。0x の直後の _ を禁止したいなら、課題文にそう書き、模範解答の正規表現も直す。"},
+  {"severity": "high", "where": "tests: test_08_numeric_literals_and_underscores（bad_nums 全体）／課題文 §5.4", "problem": "課題文では、アンダースコアの使い方が不正な数値（1__000、1000_、1._5、1e5_ など）は整数にも浮動小数点数にも当たらない。すると最後の規則『上記のいずれにも該当しない場合はそのまま文字列』により str になるのが自然な読み方になる。試験と模範解答はこれを ConfigError として扱っているが、課題文のどこにもそう書かれていない。", "fix": "課題文に『数値の形をしているが、アンダースコアの位置が不正な値（先頭・末尾・連続、小数点や指数記号の隣など）は文字列にせず ConfigError とする』と明記する。"},
+  {"severity": "low", "where": "課題文 §5.1 ダブルクォート文字列の『:= の場合の \\$』の括弧書き", "problem": "括弧書きの文章が崩れていて、何度か言い直しながら矛盾したことを書いている。最終的に『$ になる』とは読めるので結果は変わらない（test_06 の s3 と模範解答は一致している）が、読みにくい。", "fix": "『\\$ は = と := のどちらでも $ になる。= の場合、\\$ から生じた $ は ${...} 展開の開始とは見なさない』と簡潔に書き直す。"},
+  {"severity": "low", "where": "tests: test_11_type_preservation_vs_string_coercion（assertIsNot）／課題文 §6", "problem": "課題文に『独立したコピー、または同等の構造』とある。この『または同等の構造』を、同じオブジェクトを返してもよいと読む余地がある。しかし試験は assertIsNot でコピーを必須にしている。", "fix": "課題文を『リストや辞書は参照元と同じオブジェクトを共有しない深いコピーとする』とはっきり書く。"}
+]}
+```

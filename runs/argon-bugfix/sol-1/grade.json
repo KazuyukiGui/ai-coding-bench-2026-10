@@ -1,0 +1,1 @@
+{"run": 16, "fail": 0, "error": 1, "skip": 0, "bad": 1, "names": ["test_hidden.TestConfigParserHidden.test_11_type_preservation_vs_string_coercion"], "passed": 15, "status": "fail", "missing": [], "lines": 623}

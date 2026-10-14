@@ -1,0 +1,13 @@
+{
+ "model": "astra",
+ "started": "2026-10-14T14:56:40",
+ "ok": true,
+ "model_id": "gpt-6-astra",
+ "input_tokens": 14231,
+ "cached_input_tokens": 0,
+ "output_tokens": 11992,
+ "thinking_tokens": 2070,
+ "tool_items": 0,
+ "errors": [],
+ "seconds": 236.1
+}

@@ -1,0 +1,1 @@
+{"task": "claude-multifile", "ref": {"run": 29, "fail": 0, "error": 0, "skip": 0, "bad": 0, "names": [], "passed": 29, "status": "ok"}, "given": {"run": 1, "fail": 0, "error": 1, "skip": 0, "bad": 1, "names": ["unittest.loader._FailedTest.test_hidden"], "passed": 0, "status": "fail"}, "ref_lines": 232, "ok": true}

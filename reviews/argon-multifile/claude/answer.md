@@ -1,0 +1,3 @@
+```json
+{"issues": [{"severity": "low", "where": "課題文 3. service.py の cancel_or_reduce の括弧書き", "problem": "「cancel メソッドは削除または cancel_or_reduce へのエイリアスではなく、cancel_or_reduce を実装してください」は文の係り方が曖昧です。cancel を削除すべきか、残してよいか（エイリアスとして残すのは不可なのか）が読み取りにくくなっています。試験は cancel の有無を見ていないので、結果には影響しません。", "fix": "「旧 cancel メソッドは削除し、新たに cancel_or_reduce を実装してください（cancel を残す必要はありません）」のように、意図を一文で明確に書き直す。"}, {"severity": "low", "where": "課題文 2. release の『削除された元の Allocation オブジェクトを返します』", "problem": "部分解放の後に完全解放した場合の「元の」が、最初に作成された Allocation（units=6）を指すのか、削除直前に保存されていた Allocation（units=4）を指すのかが曖昧です。test_07_partial_and_full_release は後者（units=4）を期待しています。「削除された」から後者と読むのが自然なので、落ちる可能性は低いと考えます。", "fix": "「削除直前に保存されていた（部分解放が行われていればその更新後の）Allocation オブジェクトを返します」と明記する。"}]}
+```

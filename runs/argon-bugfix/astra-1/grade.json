@@ -1,0 +1,1 @@
+{"run": 16, "fail": 0, "error": 1, "skip": 0, "bad": 1, "names": ["test_hidden.TestConfigParserHidden.test_14_unquoted_interpolation_producing_spaces_raises"], "passed": 15, "status": "fail", "missing": [], "lines": 485}

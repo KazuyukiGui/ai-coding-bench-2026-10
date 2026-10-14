@@ -1,0 +1,1 @@
+{"run": 16, "fail": 1, "error": 0, "skip": 0, "bad": 1, "names": ["test_hidden.TestConfigParserHidden.test_03_line_continuation_and_even_backslashes"], "passed": 15, "status": "fail", "missing": [], "lines": 625}

@@ -1,0 +1,1 @@
+{"title": "在庫報告パッケージの金額整数化と先入先出法への移行", "category": "multifile", "answer": ["stock/money.py", "stock/parser.py", "stock/ledger.py", "stock/report.py"]}
