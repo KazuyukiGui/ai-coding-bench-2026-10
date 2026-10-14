@@ -3,7 +3,7 @@
 Claude Opus 5.5、GPT-5.6 Sol、GPT-6 Astra、Gemini 4 Argon に、同じ12題のコーディング課題を計120回解かせ、隠し試験で採点した記録です。
 題は Claude、Astra、Argon が4題ずつ作り、作り手以外の2社が見直してから凍結しました。
 
-記事: 【Zenn の記事の URL】
+記事: https://zenn.dev/gui/articles/ai-coding-bench-claude-codex-gemini
 
 ## 結果
 
@@ -15,6 +15,9 @@ Claude Opus 5.5、GPT-5.6 Sol、GPT-6 Astra、Gemini 4 Argon に、同じ12題�
 | Gemini 4 Argon | 35/36 | 97.2% | 122秒 | 11,084 |
 
 - 12題のうち10題は、4モデルとも全回で全件合格でした
+- 不合格は5回だけです（argon-bugfix で Sol 2回・Astra 1回・Argon 1回、claude-spec で Sol 1回）。Sol と Astra が落とした試験は回ごとに違います
+- Argon の不合格1回（argon-bugfix の argon-1）は、答えのコードの1行の字下げが1文字ずれた構文エラーで、試験を読み込めず0件合格です。答えの解析の失敗ではありません
+- Astra は ChatGPT Plus の利用枠に何度も当たったため、各題1回です。回数が違うので、ほかのモデルと数字を直接比べないでください
 - 1回ごとの結果は `results.csv`、答えと採点は `runs/` にあります
 
 ## 条件
@@ -60,4 +63,5 @@ bash run_codex.sh sol 3       # Sol または Astra（astra）
 
 - 題は12題で、不合格が出たのは2題です。モデルの順位を付けられる規模ではありません
 - 実行の仕組みと試験の手直しは Claude Code（Claude Opus 5.5）が担いました
-- 時間は各社のサービスの混み具合でも変わります。トークン数は各社の API の記録の値です
+- 時間は目安です。Claude と Codex は CLI 経由、Argon は API に直接つないでいて経路が違い、各社のサービスの混み具合でも変わります
+- トークン数は各社の API の記録の値で、数え方は各社で同じとは限りません。Claude と Codex の出力は思考分を含み、Argon は出力と思考が別に記録されるので、表では足した値を出しています
